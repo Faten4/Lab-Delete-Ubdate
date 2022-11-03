@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState} from 'react'
+import {useNavigate} from 'react-router-dom'
 
 function Create() {
     const [FName, setFName] =useState()
@@ -14,9 +15,11 @@ function Create() {
             LName,
             Email,
             Pass
-        }).then(res =>{
-            console.log(res);
         })
+        // navigate("/Get");
+        .then(res =>{
+             console.log(res);
+       }) 
     }
     
   return (
